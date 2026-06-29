@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int count_total_digits(int n)
+{
+    int count = 0;
+
+    while(n > 0)
+    {
+        count++;
+        n = n / 10;
+    }
+
+    return count;
+}
+
+int main()
+{
+    int n, ans;
+
+    scanf("%d", &n);
+
+    ans = count_total_digits(n);
+
+    printf("%d", ans);
+}
