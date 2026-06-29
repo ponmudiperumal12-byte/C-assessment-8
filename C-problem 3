@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int disp_twodigit_ones5()
+{
+    int i, s = 0;
+
+    for(i = 10; i <= 99; i++)
+    {
+        if(i % 10 == 5)
+            s = s + i;
+    }
+    return s;
+}
+
+int main()
+{
+    int ans;
+
+    ans = disp_twodigit_ones5();
+
+    printf("%d", ans);
+}
