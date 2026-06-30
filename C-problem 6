@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int disp_sum_all_digits(int n)
+{
+    int sum = 0;
+
+    while(n > 0)
+    {
+        sum = sum + (n % 10);
+        n = n / 10;
+    }
+
+    return sum;
+}
+
+int main()
+{
+    int n, ans;
+
+    scanf("%d", &n);
+
+    ans = disp_sum_all_digits(n);
+
+    printf("%d", ans);
+
+    return 0;
+}
