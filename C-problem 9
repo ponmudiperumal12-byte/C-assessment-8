@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int check_last_digit odd(int n)
+{
+    int last, temp, div = 1;
+
+    temp = n;
+
+    while(temp >= 10)
+    {
+        temp = temp / 10;
+        div = div * 10;
+    }
+
+    last= temp;
+
+    if(last % 2 != 0)
+        n = n - div;
+
+    return n;
+}
+
+int main()
+{
+    int n, ans;
+
+    scanf("%d", &n);
+
+    ans = check(n);
+
+    printf("%d", ans);
+}
