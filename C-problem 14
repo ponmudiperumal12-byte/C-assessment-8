@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int disp_2digit_perfect_square(int n)
+{
+    int num, count = 0;
+
+    while(n >= 10)
+    {
+        num = n % 100;
+
+        if(num == 16 || num == 25 || num == 36 ||
+           num == 49 || num == 64 || num == 81)
+        {
+            count++;
+        }
+
+        n = n / 10;
+    }
+
+    return count;
+}
+
+int main()
+{
+    int n, total;
+    printf("enter the number:) ;
+    scanf("%d", &n);
+
+    total = count_square(n);
+
+    printf("%d", ans);
+}
